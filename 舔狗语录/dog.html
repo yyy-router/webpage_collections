@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 此配置自动将请求升为https -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="dog.css">
+    <title>🐕舔狗日记</title>
+</head>
+
+<body>
+    <div class="bigBox">
+        <div class="imgBac">
+            <img src="https://yulearn.top/webSource/img/love.png" alt="">·
+        </div>
+        <div class="textBac">
+            <div class="text1">
+                <div class="text2">
+                    <div class="text3" id="text3">
+                    </div>
+                </div>
+            </div>
+            <div class="mask" id="mask"></div>
+            <div class="butBac">
+                <a href="#" class="myButton" id="button">再舔一次</a>
+                <!--  <input type="button" value="再舔一次" class="button" id="button"> -->
+                <!--   <button class="button" id="button" >再舔一次</button> -->
+            </div>
+        </div>
+        <!--   <div class="bottom">
+            <p>由于接口原因，请不要多次频繁点击按钮</p>
+        </div> -->
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var mask = document.getElementById("mask").style;
+        var text3 = document.getElementById("text3");
+        var button = document.getElementById("button");
+        var txt = "";
+        function get() {
+            mask.display = "block";
+            var ajax = new XMLHttpRequest();
+            /* https://api.muxiaoguo.cn/api/tiangourj */
+            /* http://api.weijieyue.cn/api/tgrj/api.php */
+            ajax.open('get', 'http://app.yxbug.cn/app/AxuanTGRJ/api.php');
+            ajax.send();
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+                    //如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的　
+                    txt = ajax.responseText;
+                    const txt1 = JSON.parse(txt);
+                  text3.innerHTML = txt1.data.content;
+                    console.log(txt1);
+                    setTimeout(function () {
+                        mask.display = "none";
+                    }, 500);
+
+                }
+            }
+        };
+        /* 初次加载界面调用get方法 */
+        get();
+        /* 点击按钮调用接口 */
+        button.onclick = function () {
+            get();
+        };
+    }
+</script>
+
+</html>
