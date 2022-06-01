@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* .public{
+    display: none;
+} */
+.bigBox {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background:
+        linear-gradient(#222C2B, transparent),
+        linear-gradient(to top left, #19241E, transparent),
+        linear-gradient(to top right, #2A2B26, transparent);
+    background-blend-mode: screen;
+}
+
+/* 顶部区域 */
+.topBox {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 53px;
+    line-height: 53px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.narrow {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #141E20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.narrow>img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+/* 中部区域 */
+.middleBox {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headImg {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headImg>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.headImg::before {
+    position: absolute;
+    content: "蔡虚鲲";
+    top: 73%;
+    color: white;
+    font-size: 16px;
+}
+
+/* 底部区域 */
+.bottomBox {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hangUp {
+    position: relative;
+    top: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: #FF4B4E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hangUp>img {
+    width: 40px;
+    height: 40px;
+}
+.hangUp::before{
+    content: "挂断";
+    color: white;
+    position: absolute;
+    top: 80px;
+    font-size: 15px;
+}
+.answer {
+    position: relative;
+    top: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: #02D403;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer>img {
+    width: 35px;
+    height: 35px;
+}
+.answer::before{
+    content: "接听";
+    color: white;
+    position: absolute;
+    top: 80px;
+    font-size: 15px;
+}
+/* 未接听界面 */
+.hangUpBox {
+    position: absolute;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    display: none;
+}
+
+.hangUpBox>div {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+/* 接听后界面 */
+.answerBox {
+    position: absolute;
+    z-index: 200;
+    width: 100vw;
+    height: auto;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    display: none;
+}
