@@ -1,0 +1,381 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/* 自定义字体 */
+@font-face {
+    font-family: digital_7;
+    src: url(https://yulearn.top/webDemo/music/digital-7.ttf);
+  }
+.bigBac{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+
+}
+/* 上半部分空调主体 */
+.headBac{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+}
+.headTitle{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.headTitle>p{
+    font-family: "Lucida Calligraphy", cursive, serif, sans-serif;
+}
+.headTitle>h2{
+    font-family:STXihei;
+    font-size: 30px;
+}
+.air{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 横屏状态 */
+@media (min-width:600px){
+   .airMain{
+       position: relative;
+       border: 1px solid #dfe6e9;
+       transition: 0.5s;
+       width: 600px;
+       height: 150px;
+       background-color: #FFFFFF; 
+       border-top-left-radius:20px;
+       border-top-right-radius:20px;
+       border-bottom-left-radius:30px;
+       border-bottom-right-radius:30px;
+       -webkit-box-shadow:0 0 10px #b2bec3;  
+       -moz-box-shadow:0 0 10px #b2bec3;  
+       box-shadow:0 0 15px #b2bec3;  
+}
+}
+/* 竖屏状态 */
+@media (max-width:600px){
+    .airMain{
+        position: relative;
+        border: 1px solid #dfe6e9;
+        transition: 0.5s;
+        width: 340px;
+        height: 150px;
+        background-color: #FFFFFF;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
+        -webkit-box-shadow:0 0 10px #b2bec3;  
+        -moz-box-shadow:0 0 10px #b2bec3;  
+        box-shadow:0 0 15px #b2bec3;  
+}
+}
+.wire{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+    
+}
+.line{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 23px;
+    background-color: #dfe6e9;
+}
+.icon{
+    position: absolute;
+    width: 100%;
+    height: 17px;
+    top: 2px;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+}
+.circle{
+    position: absolute;
+    right: 23px;
+    bottom: 15px;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #55efc4;
+}
+.circle1{
+    position: absolute;
+    right: 23px;
+    bottom: 15px;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #dfe6e9;
+}
+.advBag{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+    background-color: #FFFFFF;
+}
+/* 温度显示部分 */
+.num{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+    z-index: 20;
+}
+.logo{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.tem{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    line-height: 36px;
+    font-family: digital_7;
+    font-size: 25px;
+    color: #dfe6e9;
+}
+
+/* 能耗标签部分 */
+.adv{
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 50px;
+    height: 65px;
+    border-radius: 3px;
+    background-color: #00a8ff;
+}
+.first{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 11px;
+    border-radius: 4px;
+    background-color: #00a8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstCen{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    width: 80%;
+}
+.firstCen>div{
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    background-color: #FFFFFF;
+}
+.second{
+    position: absolute;
+    top: 11px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00a8ff;
+}
+.box{
+    width: 80%;
+    height: 90%;
+    background-color: #FFFFFF;
+}
+.third{
+    position: absolute;
+    top: 38px;
+    width: 100%;
+    height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.box1{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: #FFFFFF;
+}
+.box1>img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.finally{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background-color:#00a8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.finallyCen{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    width: 80%;
+
+}
+.finallyCen>div{
+    border-radius: 50%;
+    height: 2px;
+    width: 2px;
+    background-color: #FFFFFF;
+}
+/* 下半部分按钮主体 */
+.bottomBac{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 55%;
+}
+/* 横向按钮区域 */
+.bottomHead{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.crossBox{
+   width: 216px;
+   height: 72px;
+   background-color: #FFFFFF;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 20;
+}
+/* 纵向按钮区域 */
+.bottomTail{
+  width: 100%;
+  height: 78%;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+
+}
+.lengBox{
+    width: 72px;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly; /* 水平均匀分布 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column;
+}
+/* 温度超出范围弹窗 */
+.alertBag{
+    z-index: 25;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.aler{
+
+    z-index: 100;
+    position: relative;
+    width: 300px;
+    height: 45px;
+    border-radius: 5px;
+    background-color:#d63031;
+    color: #FFFFFF;
+ 
+}
+.frIcon{
+    position: absolute;
+    left: 0%;
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+.b1{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 0%;
+    text-align: center;
+    line-height: 45px;
+}
+.b1>i{
+    font-size: 20px;
+}
+.b2{
+    position: absolute;
+    right: 0%;
+    width: 280px;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+}
+.b2>p{
+    font-size: 15px;
+}
+.baIcon{
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    width: 20%;
+    border-radius: 5px;
+    background-color: #d63031;
+    text-align: center;
+    line-height: 45px;
+}
+.baIcon>i{
+    font-size: 20px;
+    color: #FFFFFF;
+}

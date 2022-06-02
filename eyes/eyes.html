@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="eyes.css">
+    <title>eyes</title>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="eye"></div>
+        <div class="eye"></div>
+
+    </div>
+    <script>
+        document.querySelector('body').addEventListener('mousemove', eyeball);
+
+        function eyeball() {
+            const eye = document.querySelectorAll('.eye');
+            eye.forEach(function(eye) {
+                //getBoundingClientReact
+                //如果是标准盒子模型，元素的尺寸等于width/height + padding + border-width的总和。
+                //如果box-sizing: border-box，元素的的尺寸等于 width/height。
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+
+                let radian = Math.atan2(event.pageX - x, event.pageY - y);
+
+                let rotation = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate(" + rotation + "deg)";
+
+            });
+        }
+    </script>
+</body>
+
+</html>
